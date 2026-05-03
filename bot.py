@@ -161,7 +161,7 @@ def main():
         scheduled_job,
         trigger="cron",
         hour=16,
-        minute=20,
+        minute=55,
         id="daily_vocab",
     )
     scheduler.start()
