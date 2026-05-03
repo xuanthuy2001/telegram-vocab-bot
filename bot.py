@@ -160,8 +160,8 @@ def main():
     scheduler.add_job(
         scheduled_job,
         trigger="cron",
-        hour=17,
-        minute=00,
+        hour=22,
+        minute=30,
         id="daily_vocab",
     )
     scheduler.start()
