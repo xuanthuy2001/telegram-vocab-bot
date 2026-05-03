@@ -1,11 +1,5 @@
-# config.py — Cấu hình bot
-# Điền thông tin của bạn vào đây
+import os
 
-# Token từ @BotFather trên Telegram
-BOT_TOKEN = "8752302450:AAHKv6hlrsCwEzIIXyUPGDLWGndgjlyITRI"
-
-# Chat ID nhận tin nhắn (cá nhân hoặc group)
-CHAT_ID = "6142638956"
-
-# Gemini API Key (lấy tại https://aistudio.google.com/apikey)
-GEMINI_API_KEY = "AIzaSyC_AJ4NybwgmnUGR1SH9PsdKNx44mMHruc"
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+CHAT_ID = os.environ.get("CHAT_ID", "")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
