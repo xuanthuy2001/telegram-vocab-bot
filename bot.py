@@ -44,7 +44,6 @@ GEMINI_URL = (
 
 async def get_banmal(words: list[dict]) -> dict[str, str]:
     
-    await asyncio.sleep(10)
     """Gọi Gemini để lấy dạng thân mật (반말) cho danh sách từ."""
     word_list = "\n".join(
         f"- {w['korean']} ({w['vietnamese']})" for w in words
@@ -152,7 +151,7 @@ def main():
     app.add_handler(CommandHandler("vocab", cmd_vocab))
     app.add_handler(CommandHandler("stats", cmd_stats))
 
-    # Scheduler: 10:30 KST = 01:30 UTC
+    # Scheduler: 22:30 KST
     async def scheduled_job():
         await send_daily_vocab(app.bot)
 
